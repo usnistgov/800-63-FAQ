@@ -10,7 +10,7 @@ description: "NIST Special Publication 800-63 Digital Identity Guidelines-FAQ"
 </div>
 
 ### NIST Special Publication 800-63: Digital Identity Guidelines
-
+<br>
 </section>
 
 <section class="home home-about" markdown="1">
@@ -19,7 +19,7 @@ The following list of FAQs for [Special Publication (SP) 800-63, Digital Identit
 
 
 Questions and comments can be submitted via [GitHub](https://github.com/usnistgov/800-63-FAQ/issues) or [email](mailto:dig-comments@nist.gov).
-<br><br>
+<br>
 
 
 <div class="section-container" markdown="1">
