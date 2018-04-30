@@ -12,11 +12,13 @@
 <a href="#q6">Q6: What is an attribute reference and an attribute value, and why are these terms used?</a>  
 <a href="#q7">Q7: SP 800-63C Section 5.2 states “An IdP MAY disclose information on subscriber activities to other RPs within the federation for security purposes, such as communication of compromised subscriber accounts.” What does this mean?</a>  
 
-*Authenticators*  
+*Authentication*  
 <a href="#q8">Q8: What is a RESTRICTED authenticator and what do providers have to do differently if they use one?</a>  
 <a href="#q9">Q9: Can you provide a more detailed description of "risk-based or adaptive authentication techniques" as mentioned in NIST SP 800-63B?</a>  
 <a href="#q10">Q10: What is authentication intent?</a>  
 <a href="#q11">Q11: What is verifier impersonation resistance?</a>  
+<a href="#q12">Q12: Is password expiration no longer recommended?</a>  
+<a href="#q13">Q13: Are password composition rules no longer recommended?</a>  
 </div>
 
 ## General
@@ -69,7 +71,7 @@ We coined the terms “reference” and “value” to effectively define method
 **A7:** This is our way of saying a provider can share information with federation participants to increase protections for the user and the overall federation network. In a federation, the goal is to share the minimum amount of data about a user to protect their privacy. But SP 800-63C enables an IdP or an RP to disclose information about subscriber activities to other participants within the federation for security purposes, such as communicating the detection of a potentially compromised subscriber account. This approach, typically called a “shared signals model” is becoming more common in the market.
 For example, an individual may use an email account to manage their online shopping account. If the email provider detects an anomaly, such as a possible account takeover, they can send this signal to the bank. The bank can do whatever they want with this information based on their risk profile and business rules. In some cases the bank may ignore the signal. In others, or if the bank got similar signals from multiple providers in a short period of time, it might choose to notify the user of suspicious activity associated with their account and use additional security measures the next time the user, or malicious actor, attempts to log in. Sharing information across the federation can help stop hackers from gaining unauthorized access to participating services.
 
-## Authenticators
+## Authentication
 
 <a name="q8"></a>**Q8: What is a RESTRICTED authenticator and what do providers have to do differently if they use one?**
 
@@ -95,3 +97,15 @@ We are eager to discover secure, standards-based ways to execute these processes
 <a name="q11"></a>**Q11: What is verifier impersonation resistance?**
 
 **A11:** Verifier impersonation resistance places requirements on authenticators to reasonably thwart a phishing attack. Phishing attacks attempt to fool an individual into providing valid credentials to an attacker or a rogue site. At AAL3, [SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) requires authenticators that use a verifier impersonation-resistant authentication protocol to prevent possible phishing attacks. There are a number of ways to do this, including various encryption protocols and digital signature technologies that bind the authenticator output to a specific protected channel. One example of a verifier impersonation-resistant authentication protocol is client-authenticated transport layer security (TLS). In this protocol, the client signs the authenticator output and earlier messages that are unique to the particular TLS connection being negotiated.
+
+<a name="q12"></a>**Q12: Is password expiration no longer recommended?**
+
+**A12:** [SP 800-63B Section 5.1.1.2](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecretver) paragraph 9 states:
+
+>"Verifiers SHOULD NOT require memorized secrets to be changed arbitrarily (e.g., periodically). However, verifiers SHALL force a change if there is evidence of compromise of the authenticator." 
+
+Users tend to choose weaker memorized secrets when they know that they will have to change them in the near future. When those changes do occur, they often select a secret that is similar to their old memorized secret, which provides a false sense of security if any of the previous secrets has been compromised. But if there is evidence that the memorized secret has been compromised, such as by a breach of the verifier's hashed password database or observed fraudulent activity, subscribers should be required to change their memorized secrets. However, this should occur rarely, so that they are less motivated to choose a weak secret with the knowledge that it will only be used for a limited period of time.
+
+<a name="q13"></a>**Q13: Are password composition rules no longer recommended?**
+
+**A13:** [SP 800-63B Section 5.1.1.2](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecretver) paragraph 9 recommends against the use of composition rules (e.g., requiring lower-case, upper-case, digits, and/or special characters) for memorized secrets. These rules provide less benefit than might be expected because users tend to use predictable methods for satisfying these requirements when imposed (e.g., appending a ! to a memorized secret when required to use a special character). The frustration they often face may also cause them to focus on minimally satisfying the requirements rather than devising a memorable but complex secret. Instead, a blacklist of common passwords prevents subscribers from choosing very common values that would be particularly vulnerable, especially to an online attack.
