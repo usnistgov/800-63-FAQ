@@ -9,7 +9,7 @@ description: "NIST Special Publication 800-63 Digital Identity Guidelines-FAQ"
 ## NIST Special Publication 800-63: Digital Identity Guidelines
 ## Frequently Asked Questions
 
-#### April 13, 2018
+#### May 3, 2018
 <br>
 </div>
 </section>
