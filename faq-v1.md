@@ -14,6 +14,7 @@
 <a href="#q-b4">Q-B4: What is verifier impersonation resistance?</a>  
 <a href="#q-b5">Q-B5: Is password expiration no longer recommended?</a>  
 <a href="#q-b6">Q-B6: Are password composition rules no longer recommended?</a>  
+<a href="#q-b7">Q-B7: Is use of knowledge-based authentication permitted?  
 
 *Federation and Assertions*  
 <a href="#q-c1">Q-C1: What is an attribute reference and an attribute value, and why are these terms used?</a>  
@@ -96,6 +97,12 @@ Users tend to choose weaker memorized secrets when they know that they will have
 **A-B6:** [SP 800-63B Section 5.1.1.2](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecretver) paragraph 9 recommends against the use of composition rules (e.g., requiring lower-case, upper-case, digits, and/or special characters) for memorized secrets. These rules provide less benefit than might be expected because users tend to use predictable methods for satisfying these requirements when imposed (e.g., appending a ! to a memorized secret when required to use a special character). The frustration they often face may also cause them to focus on minimally satisfying the requirements rather than devising a memorable but complex secret. Instead, a blacklist of common passwords prevents subscribers from choosing very common values that would be particularly vulnerable, especially to an online attack.
 
 Composition rules also inadvertently encourage people to use the same password across multiple systems since they often result in passwords that are difficult for people to memorize.
+
+<a name="q-b7"></a>**Q-B7: Is use of knowledge-based authentication permitted?**
+
+**A-B7:** Knowledge-based authentication (KBA), sometimes referred to as "security questions", is no longer recognized as an acceptable authenticator by SP 800-63. This was formerly permitted and referred to as a "pre-registered knowledge token" in SP 800-63-2 and earlier editions. The ease with which an attacker can discover the answers to many KBA questions, and relatively small number of possible choices for many of them, cause KBA to have an unacceptably high risk of successful use by an attacker.
+
+A similar technique, knowledge-based verification (KBV), is permitted for use in resolving identities and, with restrictions, in remote identity verification during enrollment and proofing. See [SP 800-63A section 5.3.2](https://pages.nist.gov/800-63-3/sp800-63a.html#kbv) for details.
 
 ## Federation and Assertions
 
