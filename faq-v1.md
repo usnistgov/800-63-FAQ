@@ -14,7 +14,8 @@
 <a href="#q-b4">Q-B4: What is verifier impersonation resistance?</a>  
 <a href="#q-b5">Q-B5: Is password expiration no longer recommended?</a>  
 <a href="#q-b6">Q-B6: Are password composition rules no longer recommended?</a>  
-<a href="#q-b7">Q-B7: Is use of knowledge-based authentication permitted?  
+<a href="#q-b7">Q-B7: Is use of knowledge-based authentication permitted?</a>  
+<a href="#q-b8">Q-B8: What should be in the list of common memorized secrets that is described in SP 800-63B section 5.1.1.2?</a>  
 
 *Federation and Assertions*  
 <a href="#q-c1">Q-C1: What is an attribute reference and an attribute value, and why are these terms used?</a>  
@@ -103,6 +104,12 @@ Composition rules also inadvertently encourage people to use the same password a
 **A-B7:** Knowledge-based authentication (KBA), sometimes referred to as "security questions", is no longer recognized as an acceptable authenticator by SP 800-63. This was formerly permitted and referred to as a "pre-registered knowledge token" in SP 800-63-2 and earlier editions. The ease with which an attacker can discover the answers to many KBA questions, and relatively small number of possible choices for many of them, cause KBA to have an unacceptably high risk of successful use by an attacker.
 
 A similar technique, knowledge-based verification (KBV), is permitted for use in resolving identities and, with restrictions, in remote identity verification during enrollment and proofing. See [SP 800-63A section 5.3.2](https://pages.nist.gov/800-63-3/sp800-63a.html#kbv) for details.
+
+<a name="q-b8"></a>**Q-B8: What should be in the list of common memorized secrets that is described in [SP 800-63B section 5.1.1.2](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecretver)?**
+
+**A-B8:** Overall, it is important to discourage the use of very common passwords, particularly those that are most likely to be tried in an online password guessing attack. Some passwords that meet requirements of common composition rules are in fact quite common (e.g., Password1!) while others that do not meet composition rules are not common at all.
+
+The dictionary, or blacklist, should contain likely common passwords without particular regard to how they are composed. If passwords with repetitive characters meet that criterion, include them. However, as our forthcoming implementation resource center will point out, the blacklist should not include every conceivable password; that is likely to cause user frustration, which often leads to predictable patterns of behavior that attackers are likely to anticipate.
 
 ## Federation and Assertions
 
