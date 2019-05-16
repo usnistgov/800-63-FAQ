@@ -1,7 +1,8 @@
 *General*  
 <a href="#q1">Q1: Why were identity proofing, authentication, and federation separated into distinct categories?</a>  
 <a href="#q2">Q2: Each xAL has only three levels. Why change from four levels to three?</a>  
-<a href="#q3">Q3: When does SP 800-63 apply to federal agencies?</a>  
+<a href="#q3">Q3: When does SP 800-63 apply to federal agencies?</a>
+<a href="#q4">Q4: Should I always use the highest xAL? How do I know which xAL to choose?</a>
 
 *Identity Proofing*  
 <a href="#q-a1">Q-A1: What is the difference between the conventional proofing process and using a trusted referee at IAL2?</a>  
@@ -47,6 +48,10 @@ We did not take this decision lightly, as many federal systems are operating at 
 > “**For legacy information systems**, agencies are expected to meet the requirements of, and be in compliance with, NIST standards and guidelines **within one year** of their respective publication dates unless otherwise directed by OMB. The one-year compliance date for revisions to NIST publications applies only to new or updated material in the publications. **For information systems under development or for legacy systems undergoing significant changes**, agencies are expected to meet the requirements of, and be in compliance with, NIST standards and guidelines **immediately upon deployment** of the systems.”
 
 Importantly, we’re not just finalizing SP 800-63 and throwing it over the wall. We’re here to help agencies get it right all the way into production. As needs are identified, we will consider additional resources to support agency implementations. These resources will not contain additional normative requirements, but will instead provide further discussion, technology-specific examples, and details to support implementation of the guidelines. As agencies implement SP 800-63 for their specific use cases, we plan to be available to answer questions, provide clarifications regarding the guidelines, and apply any implementation-specific lessons learned to future revisions.
+
+<a name="q4"></a>**Q4: Should I always use the highest xAL? How do I know which xAL to choose?**
+
+There is always a trade-off in choosing the appropriate level across all categories. Higher levels do come with greater security and assurance, but at the cost of greater complexity, overhead, and potential for failure. Therefore, it is not always a matter of choosing the highest possible level and then conforming to that. Instead, the risks and potential attacks against a given application need to be considered alongside the costs of implementing a given level. It is always possible for an implementation of an identity system to exceed the requirements of its levels in practice, and the assurance levels themselves have been designed to be subsumptive, such that fulfilling requirements for level 3 automatically fulfills (and in fact exceeds) the requirements for level 2 and level 1 of that category as well. The [core document of 800-63-3 section 6](https://pages.nist.gov/800-63-3/sp800-63-3.html#sec6) provides detailed discussion on choosing an appropriate combination of xALs. 
 
 ## Identity Proofing
 
