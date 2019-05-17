@@ -1,8 +1,8 @@
 *General*  
 <a href="#q1">Q1: Why were identity proofing, authentication, and federation separated into distinct categories?</a>  
 <a href="#q2">Q2: Each xAL has only three levels. Why change from four levels to three?</a>  
-<a href="#q3">Q3: When does SP 800-63 apply to federal agencies?</a>
-<a href="#q4">Q4: Should I always use the highest xAL? How do I know which xAL to choose?</a>
+<a href="#q3">Q3: When does SP 800-63 apply to federal agencies?</a>  
+<a href="#q4">Q4: Should I always use the highest xAL? How do I know which xAL to choose?</a>  
 
 *Identity Proofing*  
 <a href="#q-a1">Q-A1: What is the difference between the conventional proofing process and using a trusted referee at IAL2?</a>  
