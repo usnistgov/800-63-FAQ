@@ -1,3 +1,12 @@
+<!-- 
+*
+*
+*  (NOTE: to make these lists render properly, end each 
+*  line with two spaces following the closing 'a' tag.)
+*
+*
+-->
+
 *General*  
 <a href="#q1">Q1: Why were identity proofing, authentication, and federation separated into distinct categories?</a>  
 <a href="#q2">Q2: Each xAL has only three levels. Why change from four levels to three?</a>  
@@ -17,6 +26,7 @@
 <a href="#q-b6">Q-B6: Are password composition rules no longer recommended?</a>  
 <a href="#q-b7">Q-B7: Is use of knowledge-based authentication permitted?</a>  
 <a href="#q-b8">Q-B8: What should be in the list of common memorized secrets that is described in SP 800-63B section 5.1.1.2?</a>  
+<a href="#q-b9">Q-B9: Why are the timeout requirements so short for AAL2 and AAL3?</a>  
 
 *Federation and Assertions*  
 <a href="#q-c1">Q-C1: What is an attribute reference and an attribute value, and why are these terms used?</a>  
@@ -115,6 +125,14 @@ A similar technique, knowledge-based verification (KBV), is permitted for use in
 **A-B8:** Overall, it is important to discourage the use of very common passwords, particularly those that are most likely to be tried in an online password guessing attack. Some passwords that meet requirements of common composition rules are in fact quite common (e.g., Password1!) while others that do not meet composition rules are not common at all.
 
 The dictionary, or blacklist, should contain likely common passwords without particular regard to how they are composed. If passwords with repetitive characters meet that criterion, include them. However, as our forthcoming implementation resource center will point out, the blacklist should not include every conceivable password; that is likely to cause user frustration, which often leads to predictable patterns of behavior that attackers are likely to anticipate.
+
+<a name="q-b9"></a>**Q-B9: Why are the timeout requirements so short for AAL2 and AAL3?**
+
+**A-B9:** The reauthentication requirements session timeouts in 800-63B sections [4.1.3](https://pages.nist.gov/800-63-3/sp800-63b.html#aal1reauth), [4.2.3](https://pages.nist.gov/800-63-3/sp800-63b.html#aal2reauth), and [4.3.3](https://pages.nist.gov/800-63-3/sp800-63b.html#aal3reauth) are intended to mitigate situations where a user’s device is left logged in but unattended, such as if the user walks away from a terminal. As AAL2 and AAL3 are intended to protect sensitive and potentially harmful data access, sessions at these levels have to be protected strongly. The timeout values are based on both past versions of 800-63 as well as common industry practices for accessing sensitive information.
+
+There are other means of ensuring that the device is not used by a separate party, such as locking the device at the OS level and requiring local authentication for the subscriber to unlock. However, it is often difficult for a remote RP (relying party) to know the state of the subscriber’s device at runtime. In these cases, the session timeouts act as a reasonable control. If instead the RP knows that, for instance, the subscriber is using a managed system that requires screen lock by a system policy, the documented Digital Identity Acceptance Statement for the RP (see [800-63-3 section 5.5](https://pages.nist.gov/800-63-3/sp800-63-3.html#daps)) that the risks addressed by short sessions are compensated for by other factors and relax its session timeouts for such devices. Alternatively, an RP could manage most of the subscriber’s interactions at a lower AAL and switch to a higher AAL for sensitive operations. In these cases, the lesser-privileged session would be allowed to last much longer than the privilege escalation. Adopting these kinds of compensating controls are part of the RP’s risk assessment process and a matter of local policy.
+
+[Section 5.4 of 800-63-3](https://pages.nist.gov/800-63-3/sp800-63-3.html#risk) discusses the application of compensating controls and the assessment of risk in greater detail.
 
 ## Federation and Assertions
 
