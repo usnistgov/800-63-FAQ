@@ -33,3 +33,32 @@ navigation:
   url: /800-63-FAQ/
 
 host: 0.0.0.0
+
+
+collections:
+  general:
+    title: "General"
+    output: false
+  63A:
+    title: "Identity Proofing"
+    output: false
+  63B:
+    title: "Authentication"
+    output: false
+  63C:
+    title: "Federation and Assertions"
+    output: false
+
+sections:
+  - 
+    collection: general
+    title: General
+  - 
+    collection: 63A
+    title: Identity Proofing
+  - 
+    collection: 63B
+    title: Authentication
+  - 
+    collection: 63C
+    title: Federation and Assertions

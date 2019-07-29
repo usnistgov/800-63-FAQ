@@ -1,0 +1,10 @@
+---
+question: 2
+title: Each xAL has only three levels. Why change from four levels to three?
+---
+A few reasons:
+1.	In the old LOA model, LOA2 and LOA3 had very similar proofing processes. There were differences between them, but they were trivial and did not adequately address the risks associated with proofing an individual – especially if the proofing was performed remotely.
+2.	For authenticators, LOA1 and LOA2 were very similar. In fact, the biggest difference is that the minimum size of passwords (i.e., memorized secrets) increased from six characters to eight. With today’s computing power, a difference in password size of two characters is negligible.
+3.	When we conducted the analysis, we realized that LOA2 “done right” was really a composite of proofing an individual at IAL2 (at best) and then protecting their account with a password (AAL1). This is a big no-no logically and, if personal information is involved, expressly forbidden by [E.O. 13681](https://obamawhitehouse.archives.gov/the-press-office/2014/10/17/executive-order-improving-security-consumer-financial-transactions). So, almost by definition, an LOA2 implementation was either out of compliance or just insecure. To do LOA2 “right” in today’s threat environment, you need to do LOA3 anyway.
+
+We did not take this decision lightly, as many federal systems are operating at LOA2. Yet after the analysis, and obtaining buy-in from OMB, we made the update to enable federal systems to effectively respond to modern vulnerabilities. Switching to [three levels](https://pages.nist.gov/800-63-3/sp800-63-3.html#-51-overview) within each assurance component provides greater security and privacy benefits and gives agencies flexibility to better meet their mission and constituent needs. Federation Assurance Levels (FALs) represent a complete revamp from prior versions, giving greater attention to federated architectures that are becoming – and we expect will continue to become –  more prominent over time.
