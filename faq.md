@@ -31,11 +31,11 @@ Questions and comments can be submitted via [GitHub](https://github.com/usnistgo
 
   {% assign c = site.collections | where: "label", section.collection | first %}
 
-*{{ section.title }}*
+***{{ section.title }}***
 
 {% assign items = site[c.label] | sort: "question" %}
 
-  {% for item in items %}<a href="#q{{item.question | downcase}}">Q-{{item.question}}: {{ item.title }}</a>  
+  {% for item in items %}<a href="#q-{{item.question | downcase}}">Q-{{item.question}}: {{ item.title }}</a>  
 {% endfor %}
 
 {% endfor %}
@@ -50,14 +50,19 @@ Questions and comments can be submitted via [GitHub](https://github.com/usnistgo
 
 {% assign items = site[c.label] | sort: "question" %}
 
+<dl>
   {% for item in items %}
 
-<a name="q{{item.question | downcase}}"></a>**Q-{{item.question}}: {{ item.title }}**
+<dt><a name="q-{{item.question | downcase}}"></a>Q-{{item.question}}:</dt>
+<dd>{{ item.title }}</dd>
 
-**A-{{item.question}}**:  
-{{item.content}}
+<dt>A-{{item.question}}:</dt>
+<dd>{{item.content}}</dd>
+
+&nbsp;
 
   {% endfor %}
+</dl>
 
 {% endfor %}
 
