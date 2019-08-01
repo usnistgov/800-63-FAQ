@@ -8,7 +8,7 @@
 
 {% assign items = site[c.label] | sort: "question" %}
 
-  {% for item in items %}<a href="#q-{{item.question | downcase}}">Q-{{item.question}}: {{ item.title }}</a>  
+  {% for item in items %}[**Q-{{item.question}}**: {{ item.title }}](#q-{{item.question | downcase}})  
 {% endfor %}
 
 {% endfor %}
