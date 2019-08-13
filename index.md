@@ -25,7 +25,7 @@ Questions and comments can be submitted via [GitHub](https://github.com/usnistgo
 
 <div class="section-container" markdown="1">
 
-{% include_relative faq-v1.md %}
+{% include_relative faq.md %}
 
 </div>
 

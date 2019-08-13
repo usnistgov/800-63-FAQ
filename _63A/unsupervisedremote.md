@@ -1,0 +1,5 @@
+---
+question: A2
+title: What is the difference between supervised remote identity proofing and unsupervised remote identity proofing?
+---
+[Supervised remote identity proofing](https://pages.nist.gov/800-63-3/sp800-63a.html#supervised) is an equivalent approach to in-person proofing and requires a robust set of features. This includes high-resolution video monitoring through an agency-controlled device (e.g., not an applicant’s personal phone), a trained operator on the other end of the video, and a number of other security controls. If those controls are all met, supervised remote identity proofing can achieve IAL3. Supervised remote identity proofing is also perfectly fine for IAL2. Unsupervised remote proofing can be used for IAL2 but not IAL3. It does not require that a remote operator participate in the session with the applicant, and typically involves commodity hardware and services that users and agencies can easily access.
