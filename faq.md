@@ -1,6 +1,6 @@
 <!-- Navigation -->
 
-{% for section in sections %}
+{% for section in site.sections %}
 
   {% assign c = site.collections | where: "label", section.collection | first %}
 
