@@ -1,0 +1,11 @@
+---
+question: C3
+title: How do I reach FAL3?
+---
+The highest federation assurance level of FAL3 is intended to be a forward-looking goal for very high value or very high risk situations, and as such takes some effort to get to. In FAL3, the IdP has to provide not only an assertion that's been encrypted to the RP's specific key (as in FAL2), but that assertion also needs to have a reference to a key. This RP has to ask the subscriber to prove possession of that key directly in order to reach FAL3, as this helps prove that the current user is in fact the one referenced in the assertion. 
+
+In practical terms, the easiest way to reach FAL3 with today's technology is to use a certificate-based authentication (such as PIV) at the IdP and include a verifiable reference to the certificate's key in the assertion. This reference could be the fingerprint of the key, or a set of fields that uniquely and globally identifies the certificate itself. When the subscriber logs in to the RP, the RP can then challenge the subscriber to present their certificate directly. Importantly, the RP only has to make sure that the certificate presented by subscriber is the one in the assertion; the RP does not have to validate the certificate's chain or trust or process any of the attributes within the certificate. This approach has an added benefit of allowing the subscriber's attributes to be provided within the federation protocol on an as-needed basis instead of forcing all attributes to be in the certificate itself.
+
+The key referenced in the assertion is allowed to be the same as the credential that the subscriber uses to authenticate to the IdP, or it can be completely unrelated to the subscriber's primary credentials. This flexibility allows for both cross-domain SSO style systems that use federation protocols as a bridge (like the PIV example above) as well as future systems where key references can be passed between the RP and IdP to create a higher assurance level than otherwise possible. With that in mind, future extensions to protocols like WebAuthn could allow a key to be presented at the RP but known and referenced by the IdP.
+
+Note that just because FAL3 is the highest available FAL, it does not mean it's always appropriate for a given application. See also: [Q-4: Should I always use the highest xAL? How do I know which xAL to choose?](#q-4)
