@@ -1,5 +1,5 @@
 ---
-question: B2
+question: B02
 title: Can you provide a more detailed description of "risk-based or adaptive authentication techniques" as mentioned in NIST SP 800-63B?
 ---
 [Risk-based or adaptive authentication systems](https://pages.nist.gov/800-63-3/sp800-63b.html#522-rate-limiting-throttling) evaluate a host of user, system, and environmental attributes; other such signals; and behavioral profiles to make an authentication decision. IP address, geolocation, time of day, transaction type, mouse movements, keystroke, and variances from typical usage norms are some of the signals used in these systems. These solutions do not currently count as a valid authenticator in and of themselves, as this information does not necessarily constitute a “secret,” and most solutions leverage proprietary ways of making an authentication decision.

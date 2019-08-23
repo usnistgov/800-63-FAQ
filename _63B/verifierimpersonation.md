@@ -1,5 +1,5 @@
 ---
-question: B4
+question: B04
 title: What is verifier impersonation resistance?
 ---
 Verifier impersonation resistance places requirements on authenticators to reasonably thwart a phishing attack. Phishing attacks attempt to fool an individual into providing valid credentials to an attacker or a rogue site. At AAL3, [SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) requires authenticators that use a verifier impersonation-resistant authentication protocol to prevent possible phishing attacks. There are a number of ways to do this, including various encryption protocols and digital signature technologies that bind the authenticator output to a specific protected channel. One example of a verifier impersonation-resistant authentication protocol is client-authenticated transport layer security (TLS). In this protocol, the client signs the authenticator output and earlier messages that are unique to the particular TLS connection being negotiated.

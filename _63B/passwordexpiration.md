@@ -1,5 +1,5 @@
 ---
-question: B5
+question: B05
 title: Is password expiration no longer recommended?
 ---
 [SP 800-63B Section 5.1.1.2](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecretver) paragraph 9 states:

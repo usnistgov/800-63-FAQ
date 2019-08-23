@@ -1,5 +1,5 @@
 ---
-question: B9
+question: B09
 title: Why are the timeout requirements so short for AAL2 and AAL3?
 ---
 The reauthentication requirements session timeouts in 800-63B sections [4.1.3](https://pages.nist.gov/800-63-3/sp800-63b.html#aal1reauth), [4.2.3](https://pages.nist.gov/800-63-3/sp800-63b.html#aal2reauth), and [4.3.3](https://pages.nist.gov/800-63-3/sp800-63b.html#aal3reauth) are intended to mitigate situations where a user’s device is left logged in but unattended, such as if the user walks away from a terminal. As AAL2 and AAL3 are intended to protect sensitive and potentially harmful data access, sessions at these levels have to be protected strongly. The timeout values are based on both past versions of 800-63 as well as common industry practices for accessing sensitive information.
