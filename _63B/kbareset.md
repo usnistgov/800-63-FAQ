@@ -8,5 +8,5 @@ Self-serve password reset requires authentication of the account owner (subscrib
 
 KBA for password reset would leave the account vulnerable to takeover.
 
-Alternative authenticators for password reset include lists of look-up secrets and out-of-band device authentication. See [NIST Special Publication 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) for more details for these authentication processes.
+Alternative authenticators for password reset include lists of look-up secrets and out-of-band device authentication. See [NIST Special Publication 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) for more details for these authentication processes. If alternative authenticators are not available for password reset, then the subscriber's identity will need to be re-proofed in order to gain account access. See [SP 800-63B section 6.1.2.3](https://pages.nist.gov/800-63-3/sp800-63b.html#replacement) _Replacement of a Lost Authentication Factor_ for additional details.
 

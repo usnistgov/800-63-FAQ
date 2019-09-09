@@ -8,7 +8,7 @@ The compromise of the master secret to a password vault would require all passwo
 
 In SP 800-63B, NIST has not explicitly recommended the use of password managers, but recommends that verifiers permit the use of "paste" functionality so that the subscriber can use a password manager if desired. If using a password manager, subscribers should:
 
-* Choose a long, complex passphrase for the master password to the password manager and protect it from being stolen. A passphrase can be made sufficiently long to protect against attacks while still allowing memorization.
+* Choose a long passphrase for the master password to the password manager and protect it from being stolen. A passphrase can be made sufficiently long to protect against attacks while still allowing memorization.
 * Create unique passwords for all accounts or use the capability of most program managers to generate random, unique, complex passwords for each account. 
 * Avoid password managers that allow recovery of the master password. Any compromise of the master password through account recovery tools can compromise the entire password vault.
 * Use multi-factor authentication for program manager applications that allow that capability.
