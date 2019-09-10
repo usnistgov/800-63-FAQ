@@ -1,5 +1,5 @@
 ---
-question: B1
+question: B01
 title: What is a RESTRICTED authenticator and what do providers have to do differently if they use one?
 ---
 As threats evolve, some authenticators become less reliable, so we established the notion of “RESTRICTED” to tag authenticators if they become of concern. We didn’t make this up: the NIST cryptography team has been using this approach for some time, and we like to be consistent with other NIST efforts so we don’t confuse our stakeholders. Implementing a [RESTRICTED authenticator](https://pages.nist.gov/800-63-3/sp800-63b.html#restricted) requires the agency to assess, understand, and accept the risk associated with that authenticator.

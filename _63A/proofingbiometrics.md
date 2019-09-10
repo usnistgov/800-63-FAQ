@@ -1,0 +1,5 @@
+---
+question: A3
+title: If employees' fingerprints are collected for a background investigation, is it necessary for a CSP to do an additional fingerprint check?
+---
+[SP 800-63A Section 4.5.7](https://pages.nist.gov/800-63-3/sp800-63a.html#4-5-7) requires a biometric to be captured at the time of identity proofing at IAL3. The fingerprint collected for a background investigation is a discrete event for a different purpose; the intention of section 4.5.7 is for the CSP to bind a biometric captured during the identity proofing event to the subject’s identity account and associated authenticator(s) for purposes of identity account management (e.g., non-repudiation, re-proofing, or authenticator replacement). Conformance to SP 800-63A  IAL3 requires the CSP to collect this biometric sample during the identity proofing event and maintain a record of that biometric in the subject’s identity account. Please note that SP 800-63A does not require a biometric match of fingerprint samples from the background investigation and identity proofing events.

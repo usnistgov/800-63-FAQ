@@ -1,5 +1,5 @@
 ---
-question: B8
+question: B08
 title: What should be in the list of common memorized secrets that is described in SP 800-63B section 5.1.1.2?
 ---
 Overall, it is important to discourage the use of very common passwords, particularly those that are most likely to be tried in an online password guessing attack. Some passwords that meet requirements of common composition rules are in fact quite common (e.g., Password1!) while others that do not meet composition rules are not common at all.
