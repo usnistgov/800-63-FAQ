@@ -1,0 +1,7 @@
+---
+question: A4
+title: How can knowledge-based verification (KBV) be used in identity proofing at IAL2 or IAL3?
+---
+[SP 800-63A Section 5.3.2](https://pages.nist.gov/800-63-3/sp800-63a.html#kbv) presents a detailed set of requirements for the use of KBV. The presence of this section might lead one to believe that KBV has an important role in validation of identity evidence at IAL2 and IAL3. Other identity proofing requirements greatly limit this role, however.
+
+Evidence collection requirements [at IAL2](https://pages.nist.gov/800-63-3/sp800-63a.html#4412-evidence-collection-requirements) and [at IAL3](https://pages.nist.gov/800-63-3/sp800-63a.html#452-evidence-collection-requirements) include at least one piece of Superior or Strong evidence. Section 5.3, [Table 5-3](https://pages.nist.gov/800-63-3/sp800-63a.html#63aSec5-Table3) requirements for verification at Strong and Superior levels require that verification only be performed on the strongest piece of identity evidence. But Section 5.2.1, [Table 5-1](https://pages.nist.gov/800-63-3/sp800-63a.html#63aSec5-Table1) limits the use of KBV to only Fair evidence. Together, these requirements mean that KBV cannot be used to satisfy the verification requirements for IAL2 or IAL3. KBV can, however, be used for supplemental evidence verification as part of a risk-based identity proofing evaluation.
