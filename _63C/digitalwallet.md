@@ -1,0 +1,7 @@
+---
+question: C9
+title: Can a digital wallet be an IdP?
+---
+While OpenID Connect and SAML are the most common federated identity protocols in use today, the Digital Identity Guidelines allow any protocol that meets the requirements outlined in the system to act as a federation protocol. Similarly, while a web-hosted server is the most common deployment for an IdP, the Digital Identity Guidelines do not assume any particular deployment model for IdPs. 
+
+There has been interest in recent years in using applications to store cryptographically protected material on a user-carried device, a practice sometimes referred to as a digital wallet. Given that the definition of IdP does not assume a publicly deployed web service, a digital wallet could serve the function of an IdP as long as it fulfills all the requirements laid out in the guidelines. Namely, the wallet would need to create a signed assertion (which still needs to meet all the general assertion requirements) and somehow transfer that assertion to the RP over a network using either a front-channel or back-channel presentation mechanism. The RP in turn would need to be able to validate the assertion's signature and contents, as well as determine that the IdP is a trustworthy party for generating the assertion. There are numerous methods for establishing an IdP-RP trust relationship discussed in the Digital Identity Guidelines, and any of these could be applicable to trusting assertions from a digital wallet style application.
