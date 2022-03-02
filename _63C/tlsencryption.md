@@ -1,5 +1,5 @@
 ---
-question: C6
+question: C06
 title: Does the use of TLS satisfy the requirement for assertion encryption at FAL2?
 ---
 All assertions at FAL2 have to be encrypted such that only the RP can decrypt the assertion's contents. In most cases, TLS does not provide this level of protection and therefore does not suffice for the FAL2 requirement. In practice, FAL2 encryption is almost always accomplished by using a message-level encryption on the assertion itself, such as [JSON Web Encryption](https://tools.ietf.org/html/rfc7516) of the [ID Token in OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html#IDToken).

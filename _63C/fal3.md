@@ -1,5 +1,5 @@
 ---
-question: C3
+question: C03
 title: How do I reach FAL3?
 ---
 The highest federation assurance level of FAL3 is intended to be a forward-looking goal for very high value or very high risk situations, and as such takes some effort to get to. In FAL3, the IdP has to provide not only an assertion that's been encrypted to the RP's specific key (as in FAL2), but that assertion also needs to have a reference to a key. This RP has to ask the subscriber to prove possession of that key directly in order to reach FAL3, as this helps prove that the current user is in fact the one referenced in the assertion. 

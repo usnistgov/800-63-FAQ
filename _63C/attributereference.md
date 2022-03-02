@@ -1,5 +1,5 @@
 ---
-question: C1
+question: C01
 title: What is an attribute reference and an attribute value, and why are these terms used?
 ---
 [Attribute references](https://pages.nist.gov/800-63-3/sp800-63-3.html#attribute-reference) are partial attribute values, often represented as a boolean, given in response to an attribute query. Transmission of attribute references [minimizes](https://pages.nist.gov/800-63-3/sp800-63c.html#minimization) the personal information sent to a relying party (RP), enhancing the privacy of these transactions for individuals – think of the above instance of telling a RP whether a user is over a certain age as opposed to providing their full date of birth. An example that is not boolean is asserting an individual’s congressional district, rather than their full home address. An [attribute value](https://pages.nist.gov/800-63-3/sp800-63-3.html#attribute-value) is the complete value for a given attribute, like full date of birth, and is in some cases needed by the RP.
