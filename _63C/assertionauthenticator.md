@@ -1,5 +1,5 @@
 ---
-question: C5
+question: C05
 title: Is an assertion a kind of authenticator or credential?
 ---
 No, an assertion is not an authenticator as defined by [SP 800-63-3](https://pages.nist.gov/800-63-3/sp800-63-3.html#def-and-acr). From the definitions, an assertion is:

@@ -1,5 +1,5 @@
 ---
-question: C7
+question: C07
 title: If I accept a PIV certificate issued by another organization, is that federation?
 ---
 Federation protocols as defined by [SP-800 63C](https://pages.nist.gov/800-63-3/sp800-63c/) require an _assertion_ to be sent as part of the federation transaction. This assertion is created as a result of the subscriber authenticating to the IdP, and in response to a federation request from the RP. The assertion is unique per federated login, tied strictly to the RP, time limited, and can carry a variety of attributes depending on what the RP needs and what it is allowed to see. 
